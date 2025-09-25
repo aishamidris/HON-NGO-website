@@ -25,6 +25,42 @@ body {
     overflow-x: hidden;
 }
 
+/*header*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background: transparent;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.logo a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--text-light);
+  cursor: pointer;
+  z-index: 2100;
+}
+
 /*HERO SECTION*/
 .hero {
     position: relative;
@@ -111,7 +147,7 @@ body {
     color: var(--text-light);
     margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .navbar a:hover {
@@ -392,15 +428,27 @@ footer {
 /*Responsive Styles */
 @media (max-width: 900px) {
   .navbar {
-    display: none;             
-    flex-direction: column;   
+    display: none;
     position: absolute;
-    top: 60px;                 
-    right: 0;
+    top: 62px; 
+    right: 16; 
+    width: 200px; 
     background: var(--primary);
-    width: 200px;
-    padding: 20px;
-    border-radius: 0 0 8px 8px;
+    padding: 16px;
+    border-radius: 0 8px 24px rgba(0, 0, 0, 0.25);            
+    flex-direction: column;
+    gap: 0;
+    z-index: 2050;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(225, 225, 225, 0.08);
+  }
+
+  .navbar a:last-child {
+    border-bottom: none;
   }
 
   .navbar.active {
@@ -409,6 +457,11 @@ footer {
 
   .menu-toggle {
     display: block;            /* show hamburger */
+  }
+
+  .hero::after {
+    z-index: 1500;
+    pointer-events: none;
   }
 }
 

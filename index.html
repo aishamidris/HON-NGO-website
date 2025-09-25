@@ -9,17 +9,25 @@
 <body>
     <main>
         <!--Navbar -->
-        <header class="header">
-            <div class="logo">Home of Ni'imah</div>
-            <nav class="navbar">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="programs.html">Programs</a>
-                <a href="get-involved.html">Get Involved</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <!-- Hamburger (only visible on mobile) -->
-             <div class="menu-toggle">&#9776;</div>
+        <header class="header" role="banner">
+            <div class="header-inner">
+                <div class="logo"><a href="index.html"></a>  Home of Ni'imah</div>
+            
+                <!-- Hamburger -->
+                <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="open navigaion">
+                    <span class="hamburger-icon">☰</span>
+                </button>
+            
+                <!--navbar-->
+                <nav id="main-nav" class="navbar" role="navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="get-involved.html">Get Involved</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+            
         </header>
 
         <!--Hero Section -->
@@ -96,6 +104,6 @@
         </main>
     </footer>
 
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
