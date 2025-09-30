@@ -277,6 +277,10 @@ footer .social-links a {
   line-height: 1.8;
 }
 
+.vision {
+  padding-top: 5px;
+}
+
 .vision .vm {
   display: flex;
   gap: 20px;
@@ -430,6 +434,31 @@ footer .social-links a {
   font-weight: bold;
 }
 
+/*Donate styles*/
+.donate-board {
+  padding: 10px;
+  background-color: var(--text-light);
+}
+
+.donate {
+  padding: 30px;
+  margin: 50px;
+  border: var(--primary);
+  color: var(--text-dark);
+  border-radius: 10px;
+  background-color: var(--background-light);
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  border: var(--background-dark);
+  border-radius: 15px;
+  background-color: var(--card-bg);
+  margin: 10px;
+}
 
 /*Responsive Styles */
 @media (max-width: 900px) {
@@ -508,10 +537,17 @@ footer .social-links a {
   }
   .hero::after {
   pointer-events: none;
-}
-.card {
-  margin-top: 20px;
-}
   }
+  .card {
+  margin-top: 20px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+  
 
 
